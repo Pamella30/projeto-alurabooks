@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,9 +9,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
     <link rel="stylesheet" href="style.css">
     <title>AluraBooks</title>
 </head>
+
 <body>
     <header class="cabecalho">
         <div class="container">
@@ -39,9 +42,12 @@
             <img src="../projeto-alurabooks/imagens/Logo.svg" alt="logo alurabooks" class="container_imagem">
         </div>
         <div class="container">
-            <a href="#"><img src="../projeto-alurabooks/imagens/Frame 145.svg" alt="meuu favoritos" class="container_imagem"></a>
-            <a href="#"><img src="../projeto-alurabooks/imagens/Frame 98.svg" alt="carrinho de compras" class="container_imagem"></a>
-            <a href="#"><img src="../projeto-alurabooks/imagens/Frame 3.svg" alt="meu perfil" class="container_imagem"></a>
+            <a href="#"><img src="../projeto-alurabooks/imagens/Frame 145.svg" alt="meuu favoritos"
+                    class="container_imagem"></a>
+            <a href="#"><img src="../projeto-alurabooks/imagens/Frame 98.svg" alt="carrinho de compras"
+                    class="container_imagem"></a>
+            <a href="#"><img src="../projeto-alurabooks/imagens/Frame 3.svg" alt="meu perfil"
+                    class="container_imagem"></a>
         </div>
     </header>
 
@@ -52,6 +58,45 @@
     </section>
     <section class="carrossel">
         <h2 class="carrossel_titulo">Novos lancamentos</h2>
+        <!-- Slider main container -->
+        <div class="swiper">
+            <!-- Additional required wrapper -->
+              <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide"><img src="../projeto-alurabooks/imagens/Guia Front-end.svg"
+                        alt="livro-frontend"></div>
+                <div class="swiper-slide"><img src="../projeto-alurabooks/imagens/Javascript.svg" alt="livroJavaScript">
+                </div>
+                <div class="swiper-slide"><img src="../projeto-alurabooks/imagens/Liderança.svg" alt="livro lideranca">
+                </div>
+                <div class="swiper-slide"><img src="../projeto-alurabooks/imagens/ReactNative.svg" alt="livroreact">
+                </div>
+                <div class="swiper-slide"><img src="../projeto-alurabooks/imagens/UX.svg" alt="livroUX"></div>
+                ...
+            </div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
+            <!-- If we need scrollbar -->
+        </div>
     </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            spaceBetween: 10,
+            slidesPerView: 3,
+            pagination: {
+                el: '.swiper-pagination',
+                type: 'bullets',
+  },
+            });
+    </script>
 </body>
+
 </html>
