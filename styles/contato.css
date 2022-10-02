@@ -38,6 +38,30 @@
 }
 
 @media screen and (min-width: 1024px) {
-    
+    .contato {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contato_descricao {
+        margin: 1em;
+        width: 30%;
+    }
+
+    .contato_texto {
+        font-size: 24px;
+    }
+
+    .contato_email {
+        width: 30%;
+    }
+ 
+}
+
+@media screen and (min-width: 1200px) {
+    .contato {
+        padding: 3em 10vw;
+    }
 }
 
